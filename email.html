@@ -1,0 +1,31 @@
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+
+  let mailto = `dimaio_luigi@camera.it`;
+  let ebody = `
+    Al Ministro degli Affari esteri Luigi Di Maio,<br>
+    Le scrivo in merito alla situazione di Patrick George Zaki.<br><br>
+
+    Patrick è uno studente di 28 anni dell’Università di Bologna, vincitore di una prestigiosa borsa di studio Erasmus Mundus erogata dall’Unione Europea. È stato sequestrato venerdì 7 febbraio dalle forze di sicurezza egiziane al suo arrivo all’aeroporto del Cairo, dove era tornato per una breve vacanza.<br><br>
+
+    Zaki è poi letteralmente scomparso per 24 ore durante le quali, secondo le testimonianze degli avvocati egiziani e fonti quali la ong Egyptian Iniziative for Personal Rights e Amnesty International, è stato torturato a anche con scosse elettriche. Le cinque accuse mosse contro Patrick, tra cui la sovversione, sono totalmente infondate. Dopo l’udienza dello scorso 22 febbraio il giudice ha deciso di rinnovare la detenzione di Zaki di 15 giorni per la seconda volta, una strategia spesso adottata dal regime egiziano per tenere i prigionieri politici in cella il più a lungo possibile senza l’avvio di un processo.<br><br>
+
+    Le forze di sicurezza egiziane che  hanno sequestrato Zaki appartengono allo stesso apparato (la NS) che è stato già coinvolto nel sequestro e nell'assassinio del ricercatore Giulio Regeni nel 2016. Non è accettabile continuare a mantenere rapporti economici e diplomatici con un Paese come l’Egitto di Al-Sisi, che da anni dimostra di calpestare i diritti umani.<br><br>
+
+    Per questo chiedo al Ministero degli Affari esteri di richiamare immediatamente l’ambasciatore italiano in Egitto per consultazioni e di dichiarare l’Egitto un Paese non sicuro.<br><br>
+
+    Grazie per l’attenzione.<br>Cordiali saluti.
+`;
+    let esubject = `Libertà per Patrick Zaki`;
+    let ccmails = `unita.crisi@esteri.it, elisabetta.belloni@esteri.it, SGUDC@esteri.it, FreedomForPatrickGeorge@gmail.com`;
+    ebody = encodeURIComponent(ebody);
+    esubject = encodeURIComponent(esubject);
+    let fullmailto = `mailto:${mailto}?subject=${esubject}&body=${ebody}&cc=${ccmails}`;
+
+    document.location = fullmailto;
+
+    setTimeout(() => {
+      window.close();
+    }, 200);
+  });
+</script>
